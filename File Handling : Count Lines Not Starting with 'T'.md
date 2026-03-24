@@ -12,8 +12,31 @@ To write a Python program that counts the number of lines in a text file `story.
 4. After processing all lines, print the `count` value, which represents the number of lines that do not start with `'T'`.
 
 ## 🧾 Program
-Add code here
+```
 
+def create_file(file_path, content):
+    with open(file_path, 'w') as file:
+        file.write(content)
+
+
+def merge_files(file1_path, file2_path, output_file_path):
+    f1=open(file1_path,"r")
+    f2=open(file2_path,"r")
+    f3=open(output_file_path,"w")
+    f3.write(f1.read())
+    f3.write(f2.read())
+    
+
+
+def read_file(file_path):
+    with open(file_path, 'r') as file:
+        return file.read()
+
+```
 ## Output
 
+<img width="917" height="390" alt="image" src="https://github.com/user-attachments/assets/5fcf76dd-249d-45f3-9d00-f7842b7e6e59" />
+
+
 ## Result
+Thus the Python program that counts the number of lines in a text file `story.txt` that do **not** start with the alphabet `'T'`.
